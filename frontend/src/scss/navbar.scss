@@ -1,0 +1,95 @@
+.navbar {
+      @include flex(center, space-between);
+      border-radius: 8px;
+      background-color: $main-color;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      margin: 20px 30px;
+      padding: 0 20px;
+      button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 2rem;
+            cursor: pointer;
+      }
+}
+
+.navbar__logo {
+      @include flex(center, center);
+      gap: 10px;
+      padding: 10px 20px;
+      margin: 20px 40px;
+      h1 {
+            font-size: 4rem;
+      }
+      img {
+            height: 60px;
+            object-fit: cover;
+      }
+}
+
+.navbar__auth__user {
+      @include flex(center, space-between);
+      padding: 20px;
+      img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+      }
+      span {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 0 8px;
+      }
+      button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 2rem;
+            cursor: pointer;
+      }
+}
+
+@include tablet {
+      .navbar {
+            padding: 8px;
+            margin: 0;
+            border-radius: 0;
+      }
+      .navbar__auth {
+            padding: 8px;
+      }
+}
+
+@include mobile {
+      .navbar {
+            height: 60px;
+            padding: 4px 20px;
+            margin: 8px;
+      }
+      .navbar__logo {
+            margin: 0;
+            padding: 4px;
+            img {
+                  height: 30px;
+            }
+            h1 {
+                  display: none;
+            }
+      }
+      .navbar__auth {
+            width: 100%;
+            &__user {
+                  justify-content: flex-end;
+                  img {
+                        width: 30px;
+                        height: 30px;
+                  }
+                  button {
+                        width: 80px;
+                        font-size: 1.1rem;
+                        font-weight: 400;
+                  }
+            }
+      }
+}

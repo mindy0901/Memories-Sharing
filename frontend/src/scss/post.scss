@@ -1,0 +1,127 @@
+.post__container {
+      @include flex(flex-start, space-between);
+      flex-direction: column;
+      height: 420px;
+      background-color: $main-color;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      .post__link {
+            width: 100%;
+            height: 100%;
+      }
+}
+
+.post__container__top {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      flex-shrink: 0;
+      img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+      }
+      &__overlay {
+            position: absolute;
+            padding: 8px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+            @include flex(flex-start, space-between);
+            z-index: 20;
+      }
+      &__info {
+            display: flex;
+            flex-direction: column;
+            span:first-child {
+                  font-size: 1.6rem;
+                  color: white;
+            }
+            span:last-child {
+                  font-size: 1.4rem;
+                  color: white;
+            }
+      }
+      &__more {
+            button {
+                  cursor: pointer;
+                  padding: 4px 2px;
+                  background-color: transparent;
+                  border: none;
+            }
+      }
+}
+
+.post__container__bottom {
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      flex: 1;
+      padding: 12px;
+      &:hover {
+            cursor: zoom-in;
+      }
+}
+
+.post__container__bottom__title {
+      width: 100%;
+      font-size: 2rem;
+      color: black;
+      font-weight: 600;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+}
+
+.post__container__bottom__message {
+      font-size: 1.3rem;
+      font-weight: 400;
+      width: 100%;
+      margin-top: 24px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+      text-align: justify;
+}
+
+.post__container__actions {
+      @include flex(center, space-between);
+      width: 100%;
+      padding: 10px;
+}
+
+.button-like {
+      padding: 6px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 1.6rem;
+      border: none;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      border-radius: 3px;
+      transition: all 0.3s ease-in;
+      background-color: #ff6651;
+      color: white;
+      min-width: 70px;
+
+      &:hover {
+            background-color: white;
+            color: black;
+      }
+}
+
+.button-delete {
+      padding: 6px 20px;
+      min-width: 70px;
+      font-size: 1.6rem;
+      border-radius: 3px;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}

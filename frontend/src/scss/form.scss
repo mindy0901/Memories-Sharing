@@ -1,0 +1,95 @@
+.form {
+      flex-shrink: 0;
+      width: 320px;
+      height: 480px;
+      padding: 20px 10px;
+      background-color: $main-color;
+      border-radius: 8px;
+      overflow: hidden;
+}
+
+.form__container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      .form__container__search {
+            @include flex(center, space-between);
+            height: 40px;
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid lightgrey;
+            input {
+                  flex: 1;
+                  background-color: $main-color;
+                  outline: none;
+                  border: none;
+                  padding-left: 8px;
+                  font-size: 1.4rem;
+                  line-height: 1.6rem;
+                  font-weight: 400;
+                  width: 100%;
+                  height: 100%;
+            }
+            button {
+                  margin: 0;
+                  padding: 0;
+                  height: 100%;
+                  width: 60px;
+            }
+      }
+
+      h6 {
+            font-size: 2rem;
+            font-weight: 400;
+      }
+      &__filebase64 {
+            width: 100%;
+            margin: 16px 0px;
+      }
+      > input {
+            margin-top: 4px;
+            padding: 12px 16px;
+            width: 100%;
+            border-radius: 3px;
+            outline: none;
+            border: 1px solid lightgrey;
+      }
+      button {
+            cursor: pointer;
+            min-width: 70px;
+            background-color: $main-color;
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+            padding: 10px;
+            margin-top: 4px;
+            margin-right: 10px;
+      }
+}
+
+.form__disabled {
+      @include flex(flex-start, center);
+      span {
+            font-size: 2rem;
+            font-weight: 600;
+            color: $text-second-color;
+      }
+}
+
+@include tablet {
+      .form {
+            width: 100%;
+            margin-bottom: 12px;
+      }
+}
+
+@include mobile {
+      .form {
+            width: 100%;
+            margin-bottom: 12px;
+      }
+}
+
+

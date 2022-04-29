@@ -1,0 +1,63 @@
+.comment {
+      flex: 1;
+      height: 100%;
+      width: 100%;
+      background-color: $main-color;
+      padding: 20px;
+      @include flex(flex-start, space-between);
+      flex-direction: column;
+}
+
+.comment__container {
+      overflow-y: auto;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      h3 {
+            font-size: 2rem;
+            font-weight: 600;
+      }
+      span {
+            margin-top: 10px;
+            font-size: 1.6rem;
+            font-weight: 400;
+      }
+}
+
+.comment__add-comment {
+      width: 100%;
+      margin-top: 12px;
+      h3 {
+            font-size: 2rem;
+            font-weight: 600;
+      }
+      textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: $text-second-color;
+            outline: none;
+      }
+      button {
+            padding: 10px 20px;
+            border-radius: 3px;
+            border: 1px solid lightgrey;
+            font-size: 1.4rem;
+            font-weight: 400;
+            cursor: pointer;
+      }
+}
+
+@include tablet {
+      .comment__container {
+            max-height: 600px;
+      }
+}
+
+@include mobile {
+      .comment__container {
+            max-height: 400px;
+      }
+}

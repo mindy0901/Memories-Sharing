@@ -1,0 +1,102 @@
+.auth {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: none;
+      margin-top: 20px;
+      padding: 20px;
+}
+
+.auth__container {
+      background-color: $main-color;
+      padding: 20px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 400px;
+}
+
+.auth__top {
+      h1 {
+            font-size: 3rem;
+            font-weight: 600;
+      }
+}
+
+.auth__bottom {
+      margin-top: 10px;
+      width: 100%;
+}
+
+.auth__bottom__form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .input {
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px 20px;
+            border: 1px solid lightgrey;
+            margin-top: 10px;
+            div {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+            input {
+                  color: $text-main-color;
+                  width: 100%;
+                  outline: none;
+                  border: none;
+                  font-size: 1.6rem;
+                  background-color: $main-color;
+            }
+      }
+}
+
+.auth__bottom__button {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      gap: 10px;
+      button {
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: white;
+            border: 1px solid lightgrey;
+            background-color: #3e50b0;
+            cursor: pointer;
+            width: 100%;
+      }
+      span {
+            margin-top: 10px;
+            font-size: 1.4rem;
+            text-decoration: underline;
+            color: blue;
+            cursor: pointer;
+      }
+}
+
+@include tablet {
+      .auth__container {
+            width: 100%;
+            height: 460px;
+      }
+}
+
+@include mobile {
+      .auth__container {
+            height: 360px;
+      }
+}

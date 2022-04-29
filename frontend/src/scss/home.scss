@@ -1,0 +1,23 @@
+.home {
+      margin: 40px 0;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+}
+
+@include mobile {
+      .home {
+            flex-direction: column-reverse;
+            padding: 12px;
+            margin: 0;
+      }
+}
+
+@include tablet {
+      .home {
+            flex-direction: column-reverse;
+            padding: 12px;
+            margin: 0;
+      }
+}
